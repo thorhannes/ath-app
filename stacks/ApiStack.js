@@ -11,6 +11,7 @@ export default class ApiStack extends sst.Stack {
       defaultFunctionProps: {
         environment: {
           TABLE_NAME: table.tableName,
+          STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
         },
       },
 
@@ -20,6 +21,7 @@ export default class ApiStack extends sst.Stack {
         "GET /aths": "src/list.main",
         "PUT /ath/{id}": "src/update.main",
         "DELETE /ath/{id}": "src/delete.main",
+        "POST /billing": "src/billing.main",
       },
     });
     // Allow the API to access the table
