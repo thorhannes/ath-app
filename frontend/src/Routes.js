@@ -6,7 +6,7 @@ import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
-import NotFound from "./containers/NotFound";
+// import NotFound from "./containers/NotFound";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
@@ -38,6 +38,10 @@ export default function Routes() {
       <Route exact path="/settings">
         <Settings />
       </Route> */}
+
+      <Route exact path="/">
+        <Home />
+      </Route>
 
       <UnauthenticatedRoute exact path="/login">
         <Login />
